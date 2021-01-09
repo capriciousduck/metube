@@ -103,4 +103,5 @@ app.add_routes(routes)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
-    web.run_app(app, port=$PORT)
+    port = int(os.environ.get('PORT', 8081))
+    web.run_app(app, port=port)
